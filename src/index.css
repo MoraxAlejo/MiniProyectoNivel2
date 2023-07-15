@@ -30,8 +30,8 @@
 
 .parrafo-search {
  padding-left: 8px;
- padding-top: 7px;
-  font-size: 16px;
+ padding-top: 10px;
+  font-size: 13px;
 }
 
 .input {
@@ -128,8 +128,9 @@ align-items: center;
 
 .rating {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  
   
 }
 
@@ -147,10 +148,12 @@ align-items: center;
 }
 
 .type {
+  display: flex;
+  align-items: center;
   color: var(--gray-3, #828282);
   font-size: 14px;
-  padding-right: 80px;
   white-space: nowrap;
+  gap: 10px;
 
 }
 
@@ -159,11 +162,30 @@ align-items: center;
   align-items: flex-end;
   justify-content: end;
   gap: 5px;
-  padding-left: 85px;
+  
   
   
 }
 
 .numbers {
   padding-bottom: 3px;
+  display: flex;
+  
+}
+
+.superhost {
+  
+  width: 100px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+border: 1px solid #4F4F4F;
+  
+  color: #4F4F4F;
+font-family: Montserrat;
+font-size: 12px;
+font-weight: 700;
+text-transform: uppercase;
 }

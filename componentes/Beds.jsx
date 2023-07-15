@@ -1,10 +1,8 @@
 
 import { useEffect, useState } from "react";
-import Icons from "../componentes/icons";
 
 
-
-export const Cards = () => {
+export const Beds = () => {
 
    // La variable data es la que va a almacenar los datos de "stays.json" y setData nos ayudará a guardar esos datos en esa variable. Es necesario que inicialicemos esa variable como un array vacío para evitar errores.
   const [data, setData] = useState([]);
@@ -36,23 +34,8 @@ export const Cards = () => {
     <>  
           {/* Aquí te dejo un ejemplo de cómo podrías imprimir varios elementos a la vez. */}
           {data.map((el, i) => {
-          
-            // los divs llamados cards
-           
-          return <div className="cards" key={i}>
-                   <div className="contenedor-imagen"> <img src={el.photo} className="photo" alt="" /> </div>
-                    <div className="rating">     
-                    <div> <p className="type">{el.superHost && <div className="superhost">SuperHost</div>} {el.type} {el.beds && <p className="beds"> . {el.beds} beds </p>}  </p></div>
-                    <div className="points">  <Icons /> <div className="numbers"> {el.rating} </div> </div>
-                    </div>
-                    <h4 className="description"> {el.title}</h4>
-                  </div>;
-                  
-         
-
-
-            }
-            )}
+  return el.beds > 0 ? <div className="Beds" key={i}>{el.beds} Beds</div> : null;
+})}
     
      
     </>
