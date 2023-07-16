@@ -29,9 +29,19 @@
 }
 
 .parrafo-search {
- padding-left: 8px;
- padding-top: 10px;
-  font-size: 13px;
+  padding-top: 5px;
+  padding-left: 30px;
+  border-top: transparent ;
+  border-bottom: transparent;
+  border-left: transparent ;
+   width: 120px;
+   height: 54px;
+   border-color: rgb(255, 255, 255);
+   border-width: 1px;
+}
+
+.parrafo-search:focus {
+  outline: none;
 }
 
 .input {
@@ -42,7 +52,6 @@
   border-right: transparent ;
    width: 120px;
    height: 54px;
-   cursor: pointer;
    border-color: rgb(255, 255, 255);
    border-width: 1px;
 }
@@ -104,6 +113,7 @@ color: #333;
   max-width: 350px;
   background-color:white;
   border-radius: 20px;
+  cursor: pointer;
   
 }
 
@@ -134,9 +144,7 @@ align-items: center;
   
 }
 
-.contenedor-description {
-  padding-left: 15px;
-}
+
 
 .description {
   align-items: start;
@@ -144,6 +152,7 @@ align-items: center;
   justify-content: start;
   color: #333;
   font-size: 16px;
+  
   
 }
 
@@ -188,4 +197,8 @@ font-family: Montserrat;
 font-size: 12px;
 font-weight: 700;
 text-transform: uppercase;
+}
+
+.cards:hover {
+  transform: scale(1.05);
 }

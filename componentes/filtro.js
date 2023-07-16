@@ -1,4 +1,4 @@
-[
+let cities = [
     {
       "city": "Helsinki",
       "country": "Finland",
@@ -155,3 +155,4 @@
     }
   ]
   
+export default cities 

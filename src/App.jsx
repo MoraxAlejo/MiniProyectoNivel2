@@ -1,12 +1,12 @@
 import { Cards } from "../componentes/Cards";
-import Nav from "../componentes/Nav";
 import Finland from "../componentes/Finland";
+import Nav from "../componentes/Nav";
 
 function App() { 
   return (
     // mi Barra Nav y luego Finland que trae el texto antes que Los Cards
   <div className="divpadre">
-    <Nav /> 
+    <Nav />
     <Finland />
   <div className="container-cards">  
     <Cards />
