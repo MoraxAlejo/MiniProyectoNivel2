@@ -1,20 +1,36 @@
-import { Cards } from "../componentes/Cards";
-import Finland from "../componentes/Finland";
-import Nav from "../componentes/Nav";
+import { useState } from "react";
+import Cards from "./componentes/Cards";
+import Finland from "./componentes/Finland";
+import Nav from "./componentes/Nav";
 
-function App() { 
+const App = () => {
+  // Estado para almacenar los valores de los campos de entrada
+  const [city, setCity] = useState("");
+  const [guests, setGuests] = useState(0);
+
+  // Función para manejar el cambio en el campo de entrada de ciudad
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
+  };
+
+  // Función para manejar el cambio en el campo de entrada de invitados
+  const handleGuestsChange = (event) => {
+    setGuests(event.target.value);
+  };
+
   return (
-    // mi Barra Nav y luego Finland que trae el texto antes que Los Cards
-  <div className="divpadre">
-    <Nav />
-    <Finland />
-  <div className="container-cards">  
-    <Cards />
-  </div>
-  </div>
-
-  // en container cards se encuentra el Cards.jsx  
-  )
-}
+    <>
+      {/* Renderizar el componente Nav y pasar las funciones de manejo como props */}
+      <div className="divpadre">
+      <Nav onCityChange={handleCityChange} onGuestsChange={handleGuestsChange} />
+      <Finland />
+      {/* Renderizar el componente Cards y pasar los valores de los campos de entrada como props */}
+      <div className="container-cards">  
+      <Cards city={city} guests={guests} />
+      </div>
+      </div>
+    </>
+  );
+};
 
 export default App;
